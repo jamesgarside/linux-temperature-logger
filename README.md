@@ -5,13 +5,13 @@ This project allows a user to monitor the temperature of their Linux based syste
 A script reads the temperature of the CPU from the kernal and writes the output to a logfile in JSON format. Filebeat will then read that log file and ship the logs to Elasticsearch. 
 
 ## Tested Systems
-This should work on most Linux systems however I've only tested on the following systems. If you are able to run ```cat /sys/class/thermal/thermal_zone1/temp``` and anything other than 0 is returned you should be good to go.
-[ ] - CentOS 7 - AMD64
-[x] - CentOS 7 - Raspberry Pi4 
-[ ] - Ubuntu 18.04 - AMD64
-[ ] - Ubuntu 18.04 - Raspberry Pi4
-[ ] - Ubuntu 20.04 - AMD64
-[ ] - Ubuntu 20.04 - Raspberry Pi4
+This should work on most Linux systems however I've only tested on the following systems. If you are able to run ```cat /sys/class/thermal/thermal_zone0/temp``` and anything other than 0 is returned you should be good to go.
+- [ ] - CentOS 7 - AMD64
+- [x] - CentOS 7 - Raspberry Pi4 
+- [ ] - Ubuntu 18.04 - AMD64
+- [ ] - Ubuntu 18.04 - Raspberry Pi4
+- [ ] - Ubuntu 20.04 - AMD64
+- [ ] - Ubuntu 20.04 - Raspberry Pi4
 
 ## How it works
 1. A Bash script runs in the background to collect the system temperature at a given interval and then writes it to a log file.
