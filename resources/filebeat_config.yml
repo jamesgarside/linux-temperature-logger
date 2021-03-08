@@ -1,0 +1,18 @@
+filebeat:
+  inputs: 
+    - type: log
+      paths:
+        - /var/log/temperature/*
+      fields:
+        - event.kind: metric
+        - event.category: host
+        - event.type: info
+      json.keys_under_root: true
+      json.overwrite_keys: true
+      json.expand_keys: true
+
+# Elasticsearch Output
+output.elasticsearch:
+  # List of hosts to connect to.
+  hosts: ["http://elasticsearch:9200"]
+  

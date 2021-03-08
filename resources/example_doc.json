@@ -1,0 +1,64 @@
+[
+  {
+    "_index": "filebeat-7.11.1-2021.03.08-000001",
+    "_type": "_doc",
+    "_id": "RamHE3gB_s3gOcOBznYZ",
+    "_version": 1,
+    "_score": null,
+    "_source": {
+      "@timestamp": "2021-03-08T20:29:25.644Z",
+      "input": {
+        "type": "log"
+      },
+      "ecs": {
+        "version": "1.6.0"
+      },
+      "agent": {
+        "id": "sdfwfsee-1193-4249-a4b3-7f5506eff160",
+        "name": "pc-3",
+        "type": "filebeat",
+        "version": "7.11.1",
+        "hostname": "pc-3",
+        "ephemeral_id": "sdfsdfsa-0050-4396-abe6-e646a8a65edf"
+      },
+      "log": {
+        "offset": 3078,
+        "file": {
+          "path": "/var/log/temperature/cpu_temp-20210308"
+        }
+      },
+      "host": {
+        "ip": [
+          "172.8.0.1"
+        ],
+        "mac": [
+          "rd:a9:22:e2:4e:f0"
+        ],
+        "temperature": {
+          "cpu": 40.89
+        },
+        "id": "aecffd4dhtb846009a9b6cc30b411851",
+        "containerized": false,
+        "architecture": "aarch64",
+        "name": "pc-3",
+        "os": {
+          "version": "7 (AltArch)",
+          "family": "redhat",
+          "name": "CentOS Linux",
+          "kernel": "5.4.72-v8.1.el7",
+          "codename": "AltArch",
+          "platform": "centos"
+        },
+        "hostname": "pc-3"
+      }
+    },
+    "fields": {
+      "@timestamp": [
+        "2021-03-08T20:29:25.644Z"
+      ]
+    },
+    "sort": [
+      1615235365644
+    ]
+  }
+]

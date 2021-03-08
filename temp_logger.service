@@ -1,0 +1,14 @@
+[Unit]
+Description=Log system temperature
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/opt/temperature_logger/temperature_logger.sh
+
+[Install]
+WantedBy=multi-user.target
