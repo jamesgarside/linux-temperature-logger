@@ -1,0 +1,41 @@
+---
+- name: Deploy temperature logging to be collected with Filebeat
+  hosts: all
+  become: true
+  vars:
+    service_name: temp-logger
+    script_file_path: ../{{ service_name }}.sh
+    service_file_path: ../{{ service_name }}.service
+    script_dest: /opt/temperature-logger/
+
+  tasks:
+
+  - name: Create script directory.
+    file: 
+      path: "{{ script_dest }}"
+      state: directory
+      
+  - name: Copy {{ service_name }} script file.
+    copy:
+      src: "{{ script_file_path }}"
+      dest: "{{ script_dest}}{{ service_name }}.sh"
+      owner: root 
+      group: root
+      mode: u+rwx
+
+
+  - name: Copy {{ service_name }} service file.
+    copy:
+      src: "{{ service_file_path }}"
+      dest: /etc/systemd/system/{{ service_name }}.service
+      owner: root 
+      group: root
+
+  - name: Enable & start {{ service_name }} serivce.
+    service:
+      name: "{{ service_name }}"
+      enabled: true
+      state: started
+      daemon_reload: true
+
+  
