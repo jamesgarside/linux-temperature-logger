@@ -25,15 +25,15 @@ Unfortunately Elastic Common Schema is yet to have a field mapping for system te
 By running the script as a service, it allows for easy management as it will automatically start with the system.
 
 ## Install
-1. Copy the ```temp_logger.sh``` script to ```/opt/temp_logger/temp_logger.sh```
-2. Copy ```temp_logger.service``` to ```/etc/systemd/system/temp_logger.sh```
+1. Copy the ```temp-logger.sh``` script to ```/opt/temp-logger/temp-logger.sh```
+2. Copy ```temp-logger.service``` to ```/etc/systemd/system/temp-logger.sh```
 3. Install Filebeat - https://www.elastic.co/guide/en/beats/filebeat/current/setup-repositories.html
 4. Configure Filebeat. I have included a very basic Filebeat config in the resources folder.
-5. Enable temp_logger service ```systemctl enable temp_logger.service```
-6. Start temp_logger service ```systemctl start temp_logger.service```
+5. Enable temp_logger service ```systemctl enable temp-logger.service```
+6. Start temp_logger service ```systemctl start temp-logger.service```
 
 ## Script Variables
-These variables reside in the ```temp_logger.sh``` script and control the behaviour of the script.
+These variables reside in the ```temp-logger.sh``` script and control the behaviour of the script.
 | Variable | Description |
 | ----------- | ----------- |
 | PROBE_RATE | Rate of which the temperature is recorded |
