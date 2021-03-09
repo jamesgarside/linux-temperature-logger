@@ -7,6 +7,7 @@ filebeat:
         - event.kind: metric
         - event.category: host
         - event.type: info
+        - event.provider: temp_logger
       json.keys_under_root: true
       json.overwrite_keys: true
       json.expand_keys: true
