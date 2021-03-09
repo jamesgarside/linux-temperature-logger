@@ -44,6 +44,7 @@ You will need to manually install Filebeat or use a premade ansible playbook. An
 The input section should be used even if using own base config! 
 
 ### Ansible Variables
+| Variable | Description |
 | ----------- | ----------- |
 | service_name | Name of the service to be installed. Default=temp-logger |
 | script_file_path | The local path to the logger script. Default=../temp-logger.sh |
